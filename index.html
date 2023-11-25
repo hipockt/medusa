@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Image Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 3px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.nodeName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Medusa</h1>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="lady_medusa1.jpg" alt="Image 1 Description">
+            <div class="caption">Lady Medusa</div>
+        </div>
+        <div class="image-container">
+            <img src="medusa_head.jpg" alt="Image 2 Description">
+            <div class="caption">Medusa Head</div>
+         
+        </div>
+        
+        </div>
+    </div>
+</body>
+</html>
